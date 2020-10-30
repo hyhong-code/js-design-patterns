@@ -1,6 +1,6 @@
 // Factory Pattern (Creational)
-// - An object that menufactures other objects. Centralized object
-//   creation logic inside factory.
+// - An object that menufactures other objects. Factory provides a
+//   centralized object creation logic.
 
 // Provides object creation machenisims that promote flexibility
 //   and reusability. Especially in situations where one needs
@@ -23,6 +23,7 @@ function Marketer(name) {
 }
 
 function Accountant(name) {
+  // `this` starts off as {}, comes from the `new` call
   this.name = name;
   this.type = "Accountant";
 }
@@ -41,7 +42,7 @@ function EmployeeFactory() {
       case "A":
         return new Accountant(name);
       default:
-        break;
+        throw new Error(`Type "${type}" not supported.`);
     }
   };
 }
@@ -60,7 +61,7 @@ employeesDB.push(employeeFactory.create("Lance", "T"));
 employeesDB.push(employeeFactory.create("Jamie", "M"));
 employeesDB.push(employeeFactory.create("Tim", "A"));
 
-employeesDB.map((employee) => say.call(employee));
+employeesDB.map((employee) => say.call(employee)); // Provies `employee` as context in .call()
 function say() {
   console.log(`Hi, I am ${this.name} and I am a ${this.type}!`);
 }
