@@ -7,3 +7,8 @@ Design Patterns are general solutions for common software problems. They are lik
 - Creational patterns
 - Structural patterns
 - Behavioral patterns
+
+Resources:
+
+- [https://www.dofactory.com/javascript/design-patterns](https://www.dofactory.com/javascript/design-patterns)
+- [https://www.youtube.com/playlist?list=PLREW9ZuU80uTfmxo61-acnUYk3P_4plIF](https://www.youtube.com/playlist?list=PLREW9ZuU80uTfmxo61-acnUYk3P_4plIF)
