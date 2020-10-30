@@ -29,6 +29,7 @@ function Accountant(name) {
 
 // Factory
 function EmployeeFactory() {
+  // Factory in the very least must have a `create` method.
   this.create = (name, type) => {
     switch (type) {
       case "D":
